@@ -1,0 +1,63 @@
+/* Defaults
+----------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary:#05FDFF;
+  --color-secondary:#096A6B;
+  --color-default:#B8B8B8;
+ 
+  --font-small: 1rem;
+  --font-middle: 2rem;
+  --font-large: 4rem;
+  
+  --margin-stretch: 0.5rem;
+  --margin-extense: 1rem;
+}
+
+/* Layout
+----------------------------------*/
+.container {
+  border: thick solid var(--color-secondary);
+  margin: auto;
+  width: 95%;
+}
+
+.screen {
+  background: var(--color-primary);
+  border: thick solid var(--color-secondary);
+  border-radius: 1rem;
+  grid-area: screen;
+  font-size: var(--font-large);
+  min-height: calc(1.4 * var(--font-large));
+  overflow-x: scroll;
+  text-align: right;
+}
+
+.buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+grid-auto-rows: 1fr;
+  
+}
+
+
+/* Components
+----------------------------------*/
+.btn {
+  background-color: var(--color-default);
+  border-radius: var(--font-middle);
+  font-size: var(--font-middle);
+  margin: var(--margin-stretch);
+}
+
+.btn:active {
+  background-color: var(--color-primary);
+}
